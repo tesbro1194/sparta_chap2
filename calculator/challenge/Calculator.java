@@ -1,6 +1,6 @@
 package calculator.challenge;
 
-import challenge.operator.AbstractOperator;
+import calculator.challenge.operator.AbstractOperator;
 
 import java.util.ArrayList;
 import java.util.List;

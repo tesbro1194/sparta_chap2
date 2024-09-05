@@ -1,6 +1,7 @@
 package calculator.challenge;
 
-import challenge.operator.*;
+import calculator.challenge.operator.AbstractOperator;
+import calculator.challenge.operator.*;
 
 public enum OperationType {
     ADD("+", new Add()),

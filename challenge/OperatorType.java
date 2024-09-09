@@ -1,7 +1,7 @@
-package chap2_team12.calculator.challenge;
+package chap2_team12.challenge;
 
 
-import chap2_team12.calculator.challenge.operator.*;
+import chap2_team12.challenge.operator.*;
 
 public enum OperatorType {
     ADD("+", new Add()),
@@ -10,14 +10,14 @@ public enum OperatorType {
     DIV("/", new Divide());
 
     private final String type;
-    private final AbstractOperator<Operand> operator;
+    private final AbstractOperator operator;
 
-    OperatorType(String type, AbstractOperator<Operand> operator) {
+    OperatorType(String type, AbstractOperator operator) {
         this.type = type;
         this.operator = operator;
     }
 
-    public static AbstractOperator<Operand> getOperatorBySymbol(String operator) {
+    public static AbstractOperator getOperatorBySymbol(String operator) {
         for (OperatorType op : OperatorType.values()) {
             if (op.type.equals(operator)) return op.operator;
         }

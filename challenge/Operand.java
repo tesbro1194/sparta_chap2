@@ -1,26 +1,19 @@
-package chap2_team12.calculator.challenge;
+package chap2_team12.challenge;
 
+import java.math.BigDecimal;
 import java.util.Objects;
 
 public class Operand {
 
-    private final Number value;
+    private final BigDecimal value;
 
     public Operand(String inputValue) {
         validate(inputValue);
-        this.value = parseValue(inputValue);
+        this.value = BigDecimal.valueOf(Double.parseDouble(inputValue));
     }
 
-    public Operand(Double inputValue) {
-        this.value = inputValue;
-    }
-
-    public double getValue() {
-        return this.value.doubleValue();
-    }
-
-    private Number parseValue(String inputValue) {
-        return Double.parseDouble(inputValue);
+    public BigDecimal getValue() {
+        return this.value;
     }
 
     private void validate(String inputValue) {

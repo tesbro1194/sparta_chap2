@@ -1,4 +1,4 @@
-package chap2_team12.calculator.challenge;
+package chap2_team12.challenge;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package calculator.lv1;
+package chap2_team12.calculator.lv1;
 
 import java.util.Scanner;
 
@@ -14,7 +14,7 @@ public class Calculator {
 
         // flag가 false될 때까지 무한 반복
         boolean flag = true;
-        while(flag) {
+        while (flag) {
             // 두 정수 입력받기
             System.out.print("첫 번째 숫자를 입력하세요: ");
             long firstNumber = sc.nextInt();
@@ -53,13 +53,14 @@ public class Calculator {
 
             // exit 입력시 반복문 종료
             System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
-            if(sc.nextLine().equals("exit")) {
+            if (sc.nextLine().equals("exit")) {
                 flag = false;
             }
         }
     }
+
     static void validateArithmeticOperator(String operator) {
-        if(!operator.equals(ADD) && !operator.equals(SUBTRACT) && !operator.equals(DIVIDE) && !operator.equals(MULTIPLY)) {
+        if (!operator.equals(ADD) && !operator.equals(SUBTRACT) && !operator.equals(DIVIDE) && !operator.equals(MULTIPLY)) {
             throw new IllegalArgumentException("[Error] : 사칙연산('+', '-', '/', '*')만 입력 가능합니다.");
         }
     }

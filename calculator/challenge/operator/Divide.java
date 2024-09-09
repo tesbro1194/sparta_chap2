@@ -1,9 +1,12 @@
-package calculator.challenge.operator;
+package chap2_team12.calculator.challenge.operator;
 
-public class Divide extends AbstractOperator<Number> {
+
+import chap2_team12.calculator.challenge.Operand;
+
+public class Divide extends AbstractOperator<Operand> {
     @Override
-    public Number operate(Number firstNumber, Number secondNumber) {
-        if(secondNumber.equals(0)) throw new ArithmeticException("0으로 나눌 수 없습니다.");
-        return firstNumber.doubleValue() / secondNumber.doubleValue();
+    public double operate(Operand firstNumber, Operand secondNumber) {
+        if (secondNumber.getValue() == 0) throw new ArithmeticException("0으로 나눌 수 없습니다.");
+        return firstNumber.getValue() / secondNumber.getValue();
     }
 }

@@ -1,4 +1,4 @@
-package calculator.lv2;
+package chap2_team12.calculator.lv2;
 
 import java.util.Scanner;
 
@@ -8,7 +8,7 @@ public class App {
 
         // flag가 false될 때까지 무한 반복
         boolean flag = true;
-        while(flag) {
+        while (flag) {
             // 두 정수 입력받기
             System.out.print("첫 번째 숫자를 입력하세요: ");
             long firstNumber = sc.nextInt();
@@ -29,7 +29,7 @@ public class App {
             // 전체조회, 조회, 수정 입력받기
             System.out.println("'전체조회', '조회', '수정' 입력해주세요. (그 외 입력은 건너뛰기 입니다.)");
             String historyCommand = sc.nextLine();
-            if(historyCommand.equals("조회")) {
+            if (historyCommand.equals("조회")) {
                 System.out.println("조회할 기록의 인덱스를 입력해주세요.");
                 int index = sc.nextInt();
 
@@ -38,7 +38,7 @@ public class App {
                 System.out.println("조회 결과 : " + Calculator.getHistoryById(index));
             }
 
-            if(historyCommand.equals("수정")) {
+            if (historyCommand.equals("수정")) {
                 System.out.println("수정할 기록의 인덱스를 입력해주세요.");
                 int index = sc.nextInt();
                 System.out.println("수정할 기록의 값을 입력해주세요.");
@@ -49,13 +49,13 @@ public class App {
                 System.out.println("수정 결과 : " + Calculator.getHistoryById(index));
             }
 
-            if(historyCommand.equals("전체조회")) {
+            if (historyCommand.equals("전체조회")) {
                 System.out.println("조회 결과 : " + Calculator.getAllHistory());
             }
 
             // exit 입력시 반복문 종료
             System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
-            if(sc.nextLine().equals("exit")) {
+            if (sc.nextLine().equals("exit")) {
                 flag = false;
             }
         }
